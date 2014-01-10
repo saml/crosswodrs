@@ -1,0 +1,8 @@
+<!doctype html>
+<title>Puzzles</title>
+<meta charset="utf-8">
+<ul>
+    {% for puzzle in puzzles %}
+        <li><a href="{{ url_for('play_puzzle') }}?puz={{ puzzle }}">{{ puzzle }}</a></li>
+    {% endfor %}
+</ul>
