@@ -40,9 +40,8 @@ class CrosswordPuzzle(object):
             self.rows.append(tokenize_row(row))
             solution = solution[puzzle.width:]
         
-        #kam wants str index.
-        self.clues_across = [[str(d['cell']+1), d['clue']] for d in clues.across]
-        self.clues_down = [[str(d['cell']+1), d['clue']] for d in clues.down]
+        self.clues_across = [[d['num'], d['clue']] for d in clues.across]
+        self.clues_down = [[d['num'], d['clue']] for d in clues.down]
         self.author = puzzle.author
         self.width = puzzle.width
         self.height = puzzle.height
